@@ -4,14 +4,21 @@ const GraphQLSchema = graphql.GraphQLSchema;
 const GraphQLObjectType = graphql.GraphQLObjectType;
 const GraphQLString = graphql.GraphQLString;
 
+const Movie = require('./Movie');
+
+
 const Query = new GraphQLObjectType({
-    name: 'RootQueryType',
+    name: 'Query',
     fields: {
-        hello: {
-            type: GraphQLString,
-            resolve({db}) {
-                db.logSomething();
-                return 'world';
+        movie: {
+            type: Movie,
+            args: {
+                title: {
+                    type: GraphQLString
+                }
+            },
+            resolve({db}, {title}) {
+                return db.getMovie(title);
             }
         }
     }
