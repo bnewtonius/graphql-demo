@@ -6,7 +6,6 @@ const GraphQLString = graphql.GraphQLString;
 
 const Movie = require('./Movie');
 
-
 const Query = new GraphQLObjectType({
     name: 'Query',
     fields: {
