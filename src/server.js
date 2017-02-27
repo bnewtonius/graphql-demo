@@ -1,24 +1,22 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 
-const Schema = require('./Schema');
-
 module.exports = function() {
     const app = express();
 
-    app.use('/graphql/v1', graphqlHTTP({
-        schema: Schema.v1,
+    app.use('/v1/graphql', graphqlHTTP({
+        schema: require('./v1/Schema'),
         graphiql: true,
         rootValue: {
-            db: require('./db/v1')
+            db: require('./v1/db')
         }
     }));
 
-    app.use('/graphql/v2', graphqlHTTP({
-        schema: Schema.v2,
+    app.use('/v2/graphql', graphqlHTTP({
+        schema: require('./v2/Schema'),
         graphiql: true,
         rootValue: {
-            db: require('./db/v2')
+            db: require('./v2/db')
         }
     }));
 

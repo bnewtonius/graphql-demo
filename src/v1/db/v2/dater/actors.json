@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "type": "human",
+        "fname": "Luke",
+        "lname": "Skywalker"
+    },
+    {
+        "id": 2,
+        "type": "human",
+        "fname": "Leia",
+        "lname": "Organa"
+    },
+    {
+        "id": 3,
+        "type": "human",
+        "fname": "Han",
+        "lname": "Solo"
+    },
+    {
+        "id": 4,
+        "type": "human",
+        "fname": "Darth",
+        "lname": "Vader"
+    },
+    {
+        "id": 5,
+        "type": "droid",
+        "droidId": "C3PO"
+    },
+    {
+        "id": 6,
+        "type": "droid",
+        "droidId": "R2D2"
+    },
+    {
+        "id": 7,
+        "type": "alien",
+        "name": "Jabba The Hutt"
+    }
+]
