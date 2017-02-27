@@ -7,6 +7,7 @@ module.exports = {
         return matches.length > 0 ? matches[0] : null;
     },
     getActor: function(id) {
+        console.log(`Resolving: ${id}`);
         const matches = ActorsDb.filter( actor => actor.id === id );
         return matches.length > 0 ? matches[0] : null;
     }

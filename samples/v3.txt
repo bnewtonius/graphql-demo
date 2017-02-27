@@ -1,0 +1,27 @@
+{
+    movie(title:"Star Wars") {
+        title
+        actors {
+            ...ActorFrag
+        }
+    }
+}
+
+fragment ActorFrag on ActorType {
+    id
+    ref {
+        ...on DroidType {
+            id
+            droidId
+        }
+        ...on AlienType {
+            id
+            name
+        }
+        ...on HumanType {
+            id
+            fname
+            lname
+        }
+    }
+}

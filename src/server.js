@@ -20,5 +20,13 @@ module.exports = function() {
         }
     }));
 
+    app.use('/v3/graphql', graphqlHTTP({
+        schema: require('./v3/Schema'),
+        graphiql: true,
+        rootValue: {
+            db: require('./v3/db')
+        }
+    }));
+
     app.listen(4000);
 }

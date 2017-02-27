@@ -15,7 +15,6 @@ const Actor = new GraphQLObjectType({
                 context,
                 {rootValue: {db}}
             ) {
-                console.log('resolving', parent);
                 return db.getActor(parent.id);
             }
         }

@@ -1,0 +1,13 @@
+{
+    movie(title:"Star Wars") {
+        title
+        actors {
+            id
+            ref {
+                ...on DroidType {
+                    id droidId
+                }
+            }
+        }
+    }
+}
